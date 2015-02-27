@@ -7,38 +7,90 @@
 // define mixins & functions
 @import "_mixins.scss";
 
-//===============================================================================
-// VARIABLES
-//===============================================================================
-$paper:  white;
-$ink:    black;
+// define variables
+@import "_variables.scss";
 
 //===============================================================================
-// BASCIS
+// MAIN ELEMENTS
 //===============================================================================
-// box-sizing everywhere and webkit text rendering correction
-*,
-*::before,
-*:after {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
+
+html,body {
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 14px;
+  background-color: grey;
 }
 
-// remove padding & list styles from all <ul> as default
-ul {
-  padding: 0;
-  list-style: none;
+h1{
+	font-family: 'Oswald', helvetica, arial, sans-serif;
+	font-weight: 700;
+	font-size:3em;
+	text-transform: uppercase;
+	line-height:1em;
+	padding-top:0.25em;
+	span{
+		color: $green;
+	}
 }
 
-html,
-body {
-  background-color: $paper;
-  color: $ink;
-  font-family: sans-serif;
-  line-height: 1.4;
+header{
+	height:110px;
+	background-color: $lblue;
+	text-align:center;
 }
 
+a{
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	text-decoration:none;
+	color: $earth;
+}
 //===============================================================================
-// STYLES
+// STANDARD COLOURS: TEXT & BACKGROUND
 //===============================================================================
+
+.text_dblue{ color: $dblue;}
+.text_green{ color: $green;}
+.text_earth{ color: $earth;}
+.text_mud{ color: $mud;}
+.text_lblue{ color: $lblue;}
+
+.bg_dblue{ background-color: $dblue;}
+.bg_green{ background-color: $green;}
+.bg_earth{ background-color: $earth;}
+.bg_mud{ background-color: $mud;}
+.bg_lblue{ background-color: $lblue;}
+
+.phone_width{
+	width:320px;
+	height:568px;
+	margin-top:50px;
+	@include margin-auto;
+}
+.chart_wrapper{
+	margin-top:100px;
+}
+.main_nav{
+	width:70%;
+	margin-top:10px;
+	@include margin-auto;
+	a{
+		float:left;
+		text-align: center;
+		width:46%;
+		margin: 0 2% 0 2%;
+		height:45px;
+		display:inline;
+		font-size: 1.6em;
+		font-weight: 700;	
+		border-radius: 5px;
+		padding-top:0.25em;
+		&:hover{
+			background-color:$green;
+		}
+	}
+}
+
+
+
+
+
 

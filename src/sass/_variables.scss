@@ -1,0 +1,29 @@
+
+//===============================================================================
+// VARIABLES
+//===============================================================================
+$dblue: #1e5061;
+$green: #669924;
+$earth: #221000;
+$mud: #662b00;
+$lblue: #336699;
+
+
+//===============================================================================
+// BASCIS
+//===============================================================================
+// box-sizing everywhere and webkit text rendering correction
+*,
+*::before,
+*:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+// remove padding & list styles from all <ul> as default
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+
