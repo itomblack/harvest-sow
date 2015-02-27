@@ -33,7 +33,7 @@ h1{
 }
 
 header{
-	height:110px;
+	height:104px;
 	background-color: $lblue;
 	text-align:center;
 }
@@ -47,28 +47,29 @@ a{
 // STANDARD COLOURS: TEXT & BACKGROUND
 //===============================================================================
 
-.text_dblue{ color: $dblue;}
-.text_green{ color: $green;}
-.text_earth{ color: $earth;}
-.text_mud{ color: $mud;}
-.text_lblue{ color: $lblue;}
+.text-dblue{ color: $dblue;}
+.text-green{ color: $green;}
+.text-earth{ color: $earth;}
+.text-mud{ color: $mud;}
+.text-lblue{ color: $lblue;}
 
-.bg_dblue{ background-color: $dblue;}
-.bg_green{ background-color: $green;}
-.bg_earth{ background-color: $earth;}
-.bg_mud{ background-color: $mud;}
-.bg_lblue{ background-color: $lblue;}
+.bg-dblue{ background-color: $dblue;}
+.bg-green{ background-color: $green;}
+.bg-earth{ background-color: $earth;}
+.bg-mud{ background-color: $mud;}
+.bg-lblue{ background-color: $lblue;}
 
-.phone_width{
+.phone-width{
 	width:320px;
 	height:568px;
 	margin-top:50px;
 	@include margin-auto;
+	position:relative;
 }
-.chart_wrapper{
+.chart-wrapper{
 	margin-top:100px;
 }
-.main_nav{
+.main-nav{
 	width:70%;
 	margin-top:10px;
 	@include margin-auto;
@@ -81,14 +82,28 @@ a{
 		display:inline;
 		font-size: 1.6em;
 		font-weight: 700;	
-		border-radius: 5px;
+		border-radius: 3px;
 		padding-top:0.25em;
+		transition: all 0.3s ease;
 		&:hover{
 			background-color:$green;
 		}
 	}
 }
+.menu-crops, .menu-months{
+	position:absolute;
+	display:block;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: $lblue;
+	opacity:0.5;
+}
 
+.visible{
+	display:block;
+}
 
 
 
