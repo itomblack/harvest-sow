@@ -20,92 +20,224 @@ html,body {
   background-color: grey;
 }
 
-h1{
+h1 {
 	font-family: 'Oswald', helvetica, arial, sans-serif;
 	font-weight: 700;
 	font-size:3em;
 	text-transform: uppercase;
 	line-height:1em;
 	padding-top:0.25em;
-	span{
+	span {
 		color: $green;
 	}
 }
 
-header{
+header {
 	height:104px;
 	background-color: $lblue;
 	text-align:center;
 }
 
-a{
+a, h2 {
 	font-family: 'Open Sans', helvetica, arial, sans-serif;
 	text-decoration:none;
 	color: $earth;
+}
+
+ul, h1, h2 {
+	margin: 0;
 }
 //===============================================================================
 // STANDARD COLOURS: TEXT & BACKGROUND
 //===============================================================================
 
-.text-dblue{ color: $dblue;}
-.text-green{ color: $green;}
-.text-earth{ color: $earth;}
-.text-mud{ color: $mud;}
-.text-lblue{ color: $lblue;}
+.text-dblue{ color: $dblue; }
+.text-green{ color: $green; }
+.text-earth{ color: $earth; }
+.text-mud{ color: $mud; }
+.text-lblue{ color: $lblue; }
 
-.bg-dblue{ background-color: $dblue;}
-.bg-green{ background-color: $green;}
-.bg-earth{ background-color: $earth;}
-.bg-mud{ background-color: $mud;}
-.bg-lblue{ background-color: $lblue;}
+.bg-dblue{ background-color: $dblue; }
+.bg-green{ background-color: $green; }
+.bg-earth{ background-color: $earth; }
+.bg-mud{ background-color: $mud; }
+.bg-lblue{ background-color: $lblue; }
 
-.phone-width{
-	width:320px;
-	height:568px;
-	margin-top:50px;
+.phone-width {
+	width: 320px;
+	height: 568px;
+	margin-top: 50px;
 	@include margin-auto;
+	position: relative;
+}
+
+.chart-wrapper {
+	margin-top: 100px;
 	position:relative;
 }
-.chart-wrapper{
-	margin-top:100px;
+
+.main-crop-selection {
+	width: 100%;
+	position: absolute;
+	top: 32%;
+	left:-5px;
+	text-align: center;
+	color: $lblue;
+
+	img {
+		width: 25%;
+		display: block;
+		@include margin-auto;
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1em;
+	}
+
 }
-.main-nav{
-	width:70%;
-	margin-top:10px;
+
+.hide {
+	display: none;
+}
+
+.main-nav {
+	width: 70%;
+	margin-top: 10px;
 	@include margin-auto;
-	a{
-		float:left;
+	a {
+		float: left;
 		text-align: center;
-		width:46%;
+		width: 46%;
 		margin: 0 2% 0 2%;
-		height:45px;
-		display:inline;
+		height: 45px;
+		display: inline;
 		font-size: 1.6em;
 		font-weight: 700;	
 		border-radius: 3px;
-		padding-top:0.25em;
-		transition: all 0.3s ease;
-		&:hover{
-			background-color:$green;
+		padding-top: 0.25em;
+		transition: all $short ease;
+		&:hover {
+			background-color: $green;
 		}
 	}
 }
-.menu-crops, .menu-months{
-	position:absolute;
-	display:block;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
+
+.menu-crops, .menu-months {
+	position: absolute;
+	display: block;
+	top: 200%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all $long ease-out;
+}
+
+.menu-crops-background, .menu-months-background {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	opacity: 0.9;
+}
+
+.menu-crops-background {
 	background-color: $lblue;
-	opacity:0.5;
 }
 
-.visible{
-	display:block;
+.menu-months-background {
+	background-color: $dblue;
 }
 
+.menu-items-holder {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
 
+.menu-close{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10%;
 
+	&::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		transform: rotate(45deg);
+		border-bottom: 3px solid $lblue;
+		border-right: 3px solid $lblue;
+		position: absolute;
+		top: 20%;
+		left: calc(50% - 10px);
+		transition: all $short ease-out;
+	}	
 
+	&:hover {
+		&::after {
+			top: 40%;
+			border-color: $green;
+		}
+	}
+}
 
+.menu-crops-item, .menu-months-item {
+	width: 33.3333333%;
+	float: left;
+	box-sizing: border-box;
+	border: 1px solid $earth;
+	text-align: center;
+	transition: all $short ease;
+	img {
+		width: 80%;
+		display: block;
+		@include margin-auto;
+		padding-top: 10%;
+		transition: all $short ease;
+	}
+
+	h2 {
+		color: $earth;
+		font-weight: 700;
+		font-size: 14px;
+		padding-bottom: 5%;
+		transition: all $short ease;
+	}
+
+	&:hover{
+		img, h2 {
+			transform: scale(1.075);
+		}
+	}
+
+}
+
+.menu-crops-item{
+	&:hover{
+		background-color: $green;
+	}
+}
+
+.menu-months-item{
+	&:hover{
+		background-color: $lblue;
+	}
+}
+
+.month-2 { transform:rotate(30deg) }
+.month-3 { transform:rotate(60deg) }
+.month-4 { transform:rotate(90deg) }
+.month-5 { transform:rotate(120deg) }
+.month-6 { transform:rotate(150deg) }
+.month-7 { transform:rotate(180deg) }
+.month-8 { transform:rotate(210deg) }
+.month-9 { transform:rotate(240deg) }
+.month-10 { transform:rotate(270deg) }
+.month-11 { transform:rotate(300deg) }
+.month-12 { transform:rotate(330deg) }
+
+.visible {
+	top: 0;
+}
