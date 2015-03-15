@@ -69,6 +69,7 @@ ul, h1, h2 {
 	margin-top: 50px;
 	@include margin-auto;
 	position: relative;
+	overflow: hidden;
 }
 
 .chart-wrapper {
@@ -261,4 +262,4 @@ ul, h1, h2 {
 .sow-inside-active {	fill: $sowIn; }
 .sow-outside-active {	fill: $sowOut; }
 .harvest-active { 	fill: $harvest; }
-.svg-inactive { fill: $earth; } 
+.svg-inactive { fill: lighten($earth, 3); } 

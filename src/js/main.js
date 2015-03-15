@@ -57,6 +57,17 @@ menuCloseMonths.addEventListener("click", function(){
 
 function processCrop(cropTitle) {
 
+	function makeActive(chosenRingActive, ringPrefix) {
+		chosenRingActive.classList.remove("svg-inactive");
+		chosenRingActive.classList.add(ringPrefix + "-active");
+	}
+
+
+	function makeInactive(chosenRingInactive) {
+		chosenRingInactive.classList.add("svg-inactive");
+		chosenRingInactive.classList.remove("harvest-active");
+	}
+
 	selectedCropName = cropTitle;
 
 	//hide menu
@@ -67,12 +78,38 @@ function processCrop(cropTitle) {
 
 		if (selectedCropName == vegData[i].name) {
 
-			selectedCropInside = vegData[i].inside;
-			selectedCropOutside = vegData[i].outside;
-			selectedCropHarvest = vegData[i].harvest;
+					selectedCropInside = vegData[i].inside;
+					selectedCropOutside = vegData[i].outside;
+					selectedCropHarvest = vegData[i].harvest;
 
-			var testColour = document.getElementById('sow-outside-dec');
-			console.log(testColour.fill);
+					for( x=0; x< 12; x++) {
+
+						var selectedInsideSegment = document.getElementById('sow-inside-' + x);
+						var selectedOutsideSegment = document.getElementById('sow-outside-' + x);
+						var selectedHarvestSegment = document.getElementById('harvest-' + x);
+
+						if (selectedCropInside.charAt(x) == "1") {
+							makeActive(selectedInsideSegment, "sow-inside");
+						}
+						else {
+							makeInactive(selectedInsideSegment);
+						}
+
+						if (selectedCropOutside.charAt(x) == "1") {
+							makeActive(selectedOutsideSegment, "sow-outside" );
+						}
+						else {
+							makeInactive(selectedOutsideSegment);
+						}
+
+						if (selectedCropHarvest.charAt(x) == "1") {
+							makeActive(selectedHarvestSegment);
+						}
+						else {
+							makeInactive(selectedHarvestSegment, "harvest");
+						}
+
+			}
 
 		}
 
