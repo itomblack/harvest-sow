@@ -257,3 +257,8 @@ ul, h1, h2 {
 	height: auto;
 	margin: 0 1%;
 }
+
+.sow-inside-active {	fill: $sowIn; }
+.sow-outside-active {	fill: $sowOut; }
+.harvest-active { 	fill: $harvest; }
+.svg-inactive { fill: $earth; } 
