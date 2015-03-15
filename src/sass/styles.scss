@@ -257,6 +257,10 @@ ul, h1, h2 {
 	width: 98%;
 	height: auto;
 	margin: 0 1%;
+
+	path {
+		transition: all $vLong ease-out;
+	}
 }
 
 .sow-inside-active {	fill: $sowIn; }
