@@ -133,8 +133,14 @@ for( i=0; i<monthSelection.length; i++) {
 
 	monthSelection[i].addEventListener("click", function(){
 
-		var selectedMonthId = this.getElementsByTagName('img')[0].className;
+		var selectedMonthId = this.getElementsByTagName('img')[0]
+		.className.split('-')[1];
+
 		console.log(selectedMonthId);
+
+		menuChoice('main-nav-crops');
+
+
 		
 	});
 
