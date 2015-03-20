@@ -127,6 +127,22 @@ for( i=0; i<cropSelection.length; i++) {
 
 
 
+/************ CROP ITEM EVENT LISTENERS ************/
+var monthSelection = document.getElementsByClassName('menu-months-item');
+for( i=0; i<monthSelection.length; i++) {
+
+	monthSelection[i].addEventListener("click", function(){
+
+		var selectedMonthId = this.getElementsByTagName('img')[0].className;
+		console.log(selectedMonthId);
+		
+	});
+
+}
+
+
+
+
 
 
 
