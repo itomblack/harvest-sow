@@ -295,12 +295,52 @@ li {
 	position: absolute;
 	left: 0;
 	top: 0;
+
+	&::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		transform: rotate(45deg);
+		border-bottom: 3px solid $lblue;
+		border-left: 3px solid $lblue;
+		position: absolute;
+		top: 30%;
+		left: 45%;
+		transition: all $short ease-out;
+	}	
+
+	&:hover {
+		&::after {
+			left: 30%;
+			border-color: $dblue;
+		}
+	}
 }
 
 .months-form-right {
 	position: absolute;
 	right: 0;
 	top: 0;
+
+	&::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		transform: rotate(-45deg);
+		border-bottom: 3px solid $lblue;
+		border-right: 3px solid $lblue;
+		position: absolute;
+		top: 30%;
+		right: 45%;
+		transition: all $short ease-out;
+	}	
+
+	&:hover {
+		&::after {
+			right: 30%;
+			border-color: $dblue;
+		}
+	}
 }
 
 .main-key {
