@@ -1,4 +1,4 @@
-var mainNavCrops = document.getElementById('main-nav-crops'),
+	var mainNavCrops = document.getElementById('main-nav-crops'),
 	mainNavMonths = document.getElementById('main-nav-months'),
 	svgSow = document.getElementById('sow'),
 	svgHarvest = document.getElementById('harvest'),
@@ -30,10 +30,65 @@ var vegData = [
 		inside: "000000000000",
 		outside: "001111000000",
 		harvest: "000001111100"
+	},
+	{
+		name: "Broccoli",
+		inside: "011100000000",
+		outside: "000111000000",
+		harvest: "000000011000"
+	},
+	{
+		name: "Broad-Bean",
+		inside: "110000000001",
+		outside: "001110000000",
+		harvest: "000011110000"
+	},
+	{
+		name: "Cabbage",
+		inside: "000000000000",
+		outside: "000001100000",
+		harvest: "110000000011"
+	},
+	{
+		name: "Carrot",
+		inside: "000000000000",
+		outside: "011111110000",
+		harvest: "000001111110"
+	},
+	{
+		name: "Cauliflower",
+		inside: "000000000000",
+		outside: "000010000000",
+		harvest: "000000001100"
+	},
+	{
+		name: "Courgette",
+		inside: "000110000000",
+		outside: "000011000000",
+		harvest: "000000111100"
+	},
+	{
+		name: "Chilli",
+		inside: "011100000000",
+		outside: "000000000000",
+		harvest: "000000011100"
+	},
+	{
+		name: "French-Bean",
+		inside: "000110000000",
+		outside: "000011000000",
+		harvest: "0000001111000"
+	},
+	{
+		name: "Garlic",
+		inside: "000000000000",
+		outside: "111100000000",
+		harvest: "000001100000"
 	}
 ];
 
-/************ OPEN AND CLOSE MENUS ************/
+
+/************ MENUS EVENT LISTENERS ************/
 
 mainNavCrops.addEventListener("click", function(){
 	menuOpen(event);
@@ -52,10 +107,32 @@ menuCloseMonths.addEventListener("click", function(){
 });
 
 
+/************ CROP ITEM EVENT LISTENERS ************/
+var cropSelection = document.getElementsByClassName('menu-crops-item');
+for( i=0; i<cropSelection.length; i++) {
+
+	cropSelection[i].addEventListener("click", function(){
+
+		selectedCropName = String(this.innerHTML)
+
+		.split('_')[1] //splits at first _ character and takes 2nd half
+		.split('.')[0]//splits at first . character and takes 1st half
+		;
+
+		processCrop(selectedCropName);
+
+	});
+
+}
+
+
+
+
+
 
 /************ CLICK CROPS ************/
 
-function processCrop(cropTitle) {
+function processCrop(selectedCropName) {
 
 	function makeActive(chosenRingActive, ringPrefix) {
 		chosenRingActive.classList.remove("svg-inactive");
@@ -67,8 +144,6 @@ function processCrop(cropTitle) {
 		chosenRingInactive.classList.add("svg-inactive");
 		chosenRingInactive.classList.remove("harvest-active");
 	}
-
-	selectedCropName = cropTitle;
 
 	//hide menu
 	menuCrops.classList.toggle( 'visible' );
@@ -111,29 +186,17 @@ function processCrop(cropTitle) {
 
 			}
 
+			//load main central image
+
+			document.getElementById('main-crop-holder')
+			.innerHTML = "<img src='img/crops-coloured/crops_" + vegData[i].name + ".svg'/> <h3>" + vegData[i].name + "</h3>";
+
 		}
 
 	}
 
+} // /processCrops
 
-	
-
-	//highlight graph parts dependant on data set
-
-	
-
-}
-
-
-//Add event listenr for each crop menu item
-var cropSelection = document.getElementsByClassName('menu-crops-item');
-for( i=0; i<cropSelection.length; i++) {
-
-	cropSelection[i].addEventListener("click", function(){
-		processCrop(this.title);
-	});
-
-}
 
 
 
