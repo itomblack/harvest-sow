@@ -171,6 +171,11 @@ li {
 	overflow-x: hidden;
 }
 
+.menu-items-holder-margin {
+	top: 50px;
+	height: calc(90% - 50px);
+}
+
 .menu-close{
 	position: absolute;
 	bottom: 0;
@@ -203,7 +208,8 @@ li {
 	width: 33.3333333%;
 	float: left;
 	box-sizing: border-box;
-	border: 1px solid $earth;
+	border-right: 1px solid $earth;
+	border-bottom: 1px solid $earth;
 	text-align: center;
 	transition: all $short ease;
 	img {
@@ -250,17 +256,17 @@ li {
 	}
 }
 
-.month-2 { transform:rotate(30deg) }
-.month-3 { transform:rotate(60deg) }
-.month-4 { transform:rotate(90deg) }
-.month-5 { transform:rotate(120deg) }
-.month-6 { transform:rotate(150deg) }
-.month-7 { transform:rotate(180deg) }
-.month-8 { transform:rotate(210deg) }
-.month-9 { transform:rotate(240deg) }
-.month-10 { transform:rotate(270deg) }
-.month-11 { transform:rotate(300deg) }
-.month-12 { transform:rotate(330deg) }
+.month-1 { transform:rotate(30deg) }
+.month-2 { transform:rotate(60deg) }
+.month-3 { transform:rotate(90deg) }
+.month-4 { transform:rotate(120deg) }
+.month-5 { transform:rotate(150deg) }
+.month-6 { transform:rotate(180deg) }
+.month-7 { transform:rotate(210deg) }
+.month-8 { transform:rotate(240deg) }
+.month-9 { transform:rotate(270deg) }
+.month-10 { transform:rotate(300deg) }
+.month-11 { transform:rotate(330deg) }
 
 .visible {
 	top: 0;
@@ -275,12 +281,15 @@ li {
 	color: $earth;
 	border: 1px solid $earth;
 	position: relative;
+	display: none;
+	@include no-text-select;
 
 	p {
 		font-weight: bold;
 		font-size: 20px;
 		padding: 10px;
-		margin: 0;
+	  margin: 0 auto;
+  	width: 80%;
 	}
 	
 }

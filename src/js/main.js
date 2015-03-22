@@ -6,12 +6,20 @@
 	menuMonths = document.getElementById('menu-months'),
 	menuCloseCrops = document.getElementById('close-menu-crops'),
 	menuCloseMonths = document.getElementById('close-menu-months'),
+	monthsFormHeader = document.getElementById('months-form-header'),
+	monthFormTitle = document.getElementById('months-form-title'),
+	cropsItemsHolder = document.getElementById('menu-crops-items-holder'),
+	prevMonth = document.getElementById('months-form-left'),
+	nextMonth = document.getElementById('months-form-right'),
 	selectedCropName = "",
 	selectedCropInside = "",
 	selectedCropOutside = "",
-	selectedCropHarvest = ""
+	selectedCropHarvest = "",
+	selectedMonthId = ""
 	;
 
+var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var taskFilter = ['inside', 'outside', 'harvest'];
 var vegData = [
 	{
 		name: "Asparagus",
@@ -90,20 +98,21 @@ var vegData = [
 
 /************ MENUS EVENT LISTENERS ************/
 
-mainNavCrops.addEventListener("click", function(){
-	menuOpen(event);
+mainNavCrops.addEventListener('click', function(){
+	menuOpen(event, 'buttonClick');
+
 });
 
-mainNavMonths.addEventListener("click", function(){
-	menuOpen(event);
+mainNavMonths.addEventListener('click', function(){
+	menuOpen(event, 'buttonClick');
 });
 
-menuCloseCrops.addEventListener("click", function(){
-	menuOpen(event);
+menuCloseCrops.addEventListener('click', function(){
+	menuOpen(event, 'buttonClick');
 });
 
-menuCloseMonths.addEventListener("click", function(){
-	menuOpen(event);
+menuCloseMonths.addEventListener('click', function(){
+	menuOpen(event, 'buttonClick');
 });
 
 
@@ -111,7 +120,7 @@ menuCloseMonths.addEventListener("click", function(){
 var cropSelection = document.getElementsByClassName('menu-crops-item');
 for( i=0; i<cropSelection.length; i++) {
 
-	cropSelection[i].addEventListener("click", function(){
+	cropSelection[i].addEventListener('click', function(){
 
 		selectedCropName = String(this.innerHTML)
 
@@ -127,28 +136,37 @@ for( i=0; i<cropSelection.length; i++) {
 
 
 
-/************ CROP ITEM EVENT LISTENERS ************/
+/************ MONTHS ITEM EVENT LISTENERS ************/
 var monthSelection = document.getElementsByClassName('menu-months-item');
 for( i=0; i<monthSelection.length; i++) {
 
-	monthSelection[i].addEventListener("click", function(){
+	monthSelection[i].addEventListener('click', function(){
 
-		var selectedMonthId = this.getElementsByTagName('img')[0]
-		.className.split('-')[1];
+		//GET MONTH NUMBER
+		selectedMonthId = parseInt(
+			this.getElementsByTagName('img')[0]
+			.className.split('-')[1]
+		);
 
-		console.log(selectedMonthId);
+		//OPEN MONTH FORM
+		menuOpen('menu-crops', 'fromMenu');
+		menuOpen('menu-months', 'fromMenu');
 
-		menuChoice('main-nav-crops');
+		//SHOW MONTH HEADER AND ADD MARGIN TO LIST ITEMS
+		addMonthHeader(true);
 
-
+		//SHOW RELAVANT CROPS
+		displayCrops (selectedMonthId, 0);
+	
 		
 	});
 
 }
 
 
+prevMonth.addEventListener('click', function() { moveMonth(-1); });
 
-
+nextMonth.addEventListener('click', function() { moveMonth(1); });
 
 
 
@@ -224,12 +242,86 @@ function processCrop(selectedCropName) {
 
 /************ OPEN MENUS FUNCTION ************/
 
-function menuOpen( menuChoice ) {
-	var mainMenuId = menuChoice.srcElement.id
-	.replace( 'main-nav-','' )
-	.replace( 'close-menu-','' );
+function menuOpen( menuChoice, type ) {
 
-	var menuSelection = document.getElementById( 'menu-' + mainMenuId );
-	menuSelection.classList.toggle( 'visible' );
+	addMonthHeader(false);
+	var menuSelection = '';
+
+	if (type == 'buttonClick') {
+
+		//reset any hidden crops
+		for( i=0; i<cropSelection.length; i++) { 
+			cropSelection[i].classList.remove('hide');	
+		}
+
+		var mainMenuId = menuChoice.srcElement.id
+		.replace( 'main-nav-','' )
+		.replace( 'close-menu-','' );
+
+		menuSelection = document.getElementById( 'menu-' + mainMenuId );
+	}
 	
+	else if (type == "fromMenu") {
+		menuSelection = document.getElementById( menuChoice );
+	}
+		menuSelection.classList.toggle( 'visible' );
 }
+
+
+
+/************ ADD MONTH HEADER NAV TO CROPS PAGE ************/
+function addMonthHeader(openHeader) {
+	if (openHeader === true) {
+
+		monthsFormHeader.style.display = 'block';
+		cropsItemsHolder.className += ' menu-items-holder-margin';
+	}
+
+	else {
+		monthsFormHeader.style.display = 'none';
+		cropsItemsHolder.className = cropsItemsHolder.className.replace(' menu-items-holder-margin', '');
+	}
+}
+
+
+
+/************ FILTER CROPS BY MONTH DATA ************/
+
+function displayCrops(selectedMonthId, filterNum) {
+
+	var whatFunction = taskFilter[filterNum];
+	//SET TITLE TO SELECTED MONTH
+		monthFormTitle.innerHTML = monthNames[selectedMonthId] + " ( " + whatFunction + " )";
+
+		//HIDE UNWANTED CROPS
+		for( i=0; i<cropSelection.length; i++) {
+
+				if ( vegData[i][whatFunction].charAt(selectedMonthId) == '0'){
+					cropSelection[i].classList.add('hide');
+				}
+				else{
+					cropSelection[i].classList.remove('hide');	
+				}
+		}
+	}
+
+
+	/************ MOVE MONTH ************/
+
+	function moveMonth(direction) {
+		
+		//adjust month number
+		selectedMonthId = selectedMonthId + direction;
+		//looping
+		if (selectedMonthId < 0) {
+			selectedMonthId = 11;
+		}
+		else if (selectedMonthId > 11) {
+			selectedMonthId = 0;
+		}
+		//display information
+		displayCrops (selectedMonthId, 0);
+		
+
+	}
+
