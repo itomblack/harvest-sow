@@ -287,7 +287,7 @@ function addMonthHeader(openHeader) {
 
 /************ FILTER CROPS BY MONTH DATA ************/
 
-function displayCrops(selectedMonthId, filterNum) {
+function displayCrops(selectedMonthId, filterNum) {  //!!***NEED TO GET THIS WORKING WITH SOME KIND OF FILTER SELECTOR!!***//
 
 	var whatFunction = taskFilter[filterNum];
 	//SET TITLE TO SELECTED MONTH
