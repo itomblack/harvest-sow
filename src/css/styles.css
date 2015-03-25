@@ -551,39 +551,41 @@ li {
 .months-form-header {
   height: 50px;
   width: 100%;
-  background-color: #669924;
+  background-color: #336699;
   float: left;
   text-align: center;
   color: #221000;
   position: relative;
   display: none;
+  border-bottom: 1px solid #221000;
   -webkit-user-select: none;
   /* Chrome/Safari */
   -moz-user-select: none;
   /* Firefox */
   -ms-user-select: none;
   /* IE10+ */ }
-  /* line 293, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 294, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-header p {
     font-weight: bold;
     font-size: 20px;
     padding: 10px;
     margin: 0 auto;
     width: 80%;
-    height: 100%; }
+    height: 50px; }
 
-/* line 304, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 305, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-left, .months-form-right {
-  height: 100%;
+  height: 50px;
   width: 50px;
-  background-color: #669924; }
+  background-color: #336699;
+  border-bottom: 1px solid #221000; }
 
-/* line 310, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 312, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-left {
   position: absolute;
   left: 0;
   top: 0; }
-  /* line 315, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 317, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-left::after {
     content: "";
     width: 20px;
@@ -591,29 +593,29 @@ li {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    border-bottom: 3px solid #336699;
-    border-left: 3px solid #336699;
+    border-bottom: 3px solid #669924;
+    border-left: 3px solid #669924;
     position: absolute;
     top: 30%;
     left: 45%;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
-  /* line 329, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 331, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-left:hover::after {
     left: 30%;
     border-color: #1e5061; }
 
-/* line 336, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 338, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-phase-left {
   top: 50px;
   left: 50px; }
 
-/* line 341, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 343, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-right {
   position: absolute;
   right: 0;
   top: 0; }
-  /* line 346, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 348, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-right::after {
     content: "";
     width: 20px;
@@ -621,86 +623,89 @@ li {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    border-bottom: 3px solid #336699;
-    border-right: 3px solid #336699;
+    border-bottom: 3px solid #669924;
+    border-right: 3px solid #669924;
     position: absolute;
     top: 30%;
     right: 45%;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
-  /* line 360, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 362, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-right:hover::after {
     right: 30%;
     border-color: #1e5061; }
 
-/* line 368, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 370, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 [class*='months-btn-'] {
   width: 33.333%;
-  height: 100%;
+  height: 50px;
   text-align: center;
   float: left;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 0;
   padding: 14px;
   color: #221000;
-  border-top: 1px solid #221000;
   margin: 0;
+  opacity: 0.3;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
-  /* line 384, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
-  [class*='months-btn-']:hover p {
+  /* line 382, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  [class*='months-btn-'] p {
+    line-height: 0;
+    font-size: 16px;
+    font-weight: bold; }
+  /* line 388, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  [class*='months-btn-']:hover {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
+    opacity: 1; }
+  /* line 393, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  [class*='months-btn-'].active {
+    opacity: 1; }
 
-/* line 391, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 399, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-btn-inside {
-  background-color: #1e5061; }
+  background-color: #1E5061; }
 
-/* line 392, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 400, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-btn-outside {
-  background-color: #336699; }
+  background-color: #1E8683; }
 
-/* line 393, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 401, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .months-btn-harvest {
   background-color: #669924; }
 
-/* line 396, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 404, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .main-key {
   width: 100%; }
-  /* line 399, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 407, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .main-key img {
     margin: -10px auto -0 auto;
     display: block; }
 
-/* line 405, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 413, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .svg-all-circle {
   width: 98%;
   height: auto;
   margin: 0 1%; }
-  /* line 410, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 418, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
   .svg-all-circle path {
     -webkit-transition: all 1.4s ease-out;
     transition: all 1.4s ease-out; }
 
-/* line 415, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 423, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .sow-inside-active {
   fill: #1E5061; }
 
-/* line 416, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 424, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .sow-outside-active {
   fill: #1E8683; }
 
-/* line 417, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 425, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .harvest-active {
   fill: #669924; }
 
-/* line 418, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+/* line 426, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .svg-inactive {
   fill: #311700; }

@@ -11,11 +11,15 @@
 	cropsItemsHolder = document.getElementById('menu-crops-items-holder'),
 	prevMonth = document.getElementById('months-form-left'),
 	nextMonth = document.getElementById('months-form-right'),
-	selectedCropName = "",
-	selectedCropInside = "",
-	selectedCropOutside = "",
-	selectedCropHarvest = "",
-	selectedMonthId = ""
+	btnInside = document.getElementById('months-form-btn-inside'),
+	btnOutside = document.getElementById('months-form-btn-outside'),
+	btnHarvest = document.getElementById('months-form-btn-harvest'),
+	selectedCropName = '',
+	selectedCropInside = '',
+	selectedCropOutside = '',
+	selectedCropHarvest = '',
+	selectedMonthId = '',
+	whatFunction = 'inside'
 	;
 
 var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -116,6 +120,18 @@ menuCloseMonths.addEventListener('click', function(){
 });
 
 
+btnInside.addEventListener('click', function(){
+	changeFunction(this, 'inside');
+});
+
+btnOutside.addEventListener('click', function(){
+	changeFunction(this, 'outside');
+});
+
+btnHarvest.addEventListener('click', function(){
+	changeFunction(this, 'harvest');
+});
+
 /************ CROP ITEM EVENT LISTENERS ************/
 var cropSelection = document.getElementsByClassName('menu-crops-item');
 for( i=0; i<cropSelection.length; i++) {
@@ -133,7 +149,6 @@ for( i=0; i<cropSelection.length; i++) {
 	});
 
 }
-
 
 
 /************ MONTHS ITEM EVENT LISTENERS ************/
@@ -289,9 +304,8 @@ function addMonthHeader(openHeader) {
 
 function displayCrops(selectedMonthId, filterNum) {  //!!***NEED TO GET THIS WORKING WITH SOME KIND OF FILTER SELECTOR!!***//
 
-	var whatFunction = taskFilter[filterNum];
 	//SET TITLE TO SELECTED MONTH
-		monthFormTitle.innerHTML = monthNames[selectedMonthId] + " ( " + whatFunction + " )";
+		monthFormTitle.innerHTML = monthNames[selectedMonthId];
 
 		//HIDE UNWANTED CROPS
 		for( i=0; i<cropSelection.length; i++) {
@@ -306,22 +320,46 @@ function displayCrops(selectedMonthId, filterNum) {  //!!***NEED TO GET THIS WOR
 	}
 
 
-	/************ MOVE MONTH ************/
+/************ MOVE MONTH ************/
 
-	function moveMonth(direction) {
-		
-		//adjust month number
-		selectedMonthId = selectedMonthId + direction;
-		//looping
-		if (selectedMonthId < 0) {
-			selectedMonthId = 11;
-		}
-		else if (selectedMonthId > 11) {
-			selectedMonthId = 0;
-		}
-		//display information
-		displayCrops (selectedMonthId, 0);
-		
-
+function moveMonth(direction) {
+	
+	//adjust month number
+	selectedMonthId = selectedMonthId + direction;
+	//looping
+	if (selectedMonthId < 0) {
+		selectedMonthId = 11;
 	}
+	else if (selectedMonthId > 11) {
+		selectedMonthId = 0;
+	}
+	//display information
+	displayCrops (selectedMonthId, 0);
+	
+
+}
+
+
+function changeFunction(thisBtn, viewType) {
+	//set function according to button
+	whatFunction = viewType;
+
+	//change active button
+	btnInside.classList.remove('active');
+	btnOutside.classList.remove('active');
+	btnHarvest.classList.remove('active');
+
+	thisBtn.classList.add('active');
+
+	//reload crops but stay on same month
+	moveMonth(0);
+}
+
+
+/************ set function to indoor first for month selection ************/
+
+
+var whatFunctionButton = document.getElementById('months-form-btn-' + whatFunction);
+
+whatFunctionButton.classList.add('active');
 

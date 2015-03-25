@@ -281,12 +281,13 @@ li {
 .months-form-header {
 	height: 50px;
 	width: 100%;
-	background-color: $green;
+	background-color: $lblue;
 	float: left;
 	text-align: center;
 	color: $earth;
 	position: relative;
 	display: none;
+	border-bottom: 1px solid $earth;
 	
 	@include no-text-select;
 
@@ -296,15 +297,16 @@ li {
 		padding: 10px;
 	  margin: 0 auto;
   	width: 80%;
-  	height: 100%;
+  	height: 50px;;
 	}
 	
 }
 
 .months-form-left, .months-form-right {
-	height: 100%;
+	height: 50px;
 	width: 50px;
-	background-color: $green;
+	background-color: $lblue;
+	border-bottom: 1px solid $earth;
 }
 
 .months-form-left {
@@ -317,8 +319,8 @@ li {
 		width: 20px;
 		height: 20px;
 		transform: rotate(45deg);
-		border-bottom: 3px solid $lblue;
-		border-left: 3px solid $lblue;
+		border-bottom: 3px solid $green;
+		border-left: 3px solid $green;
 		position: absolute;
 		top: 30%;
 		left: 45%;
@@ -348,8 +350,8 @@ li {
 		width: 20px;
 		height: 20px;
 		transform: rotate(-45deg);
-		border-bottom: 3px solid $lblue;
-		border-right: 3px solid $lblue;
+		border-bottom: 3px solid $green;
+		border-right: 3px solid $green;
 		position: absolute;
 		top: 30%;
 		right: 45%;
@@ -367,30 +369,36 @@ li {
 
 [class*='months-btn-'] {
 	width: 33.333%;
-	height: 100%;
+	height: 50px;
 	text-align: center;
 	float: left;
-	font-size: 18px;
-  font-weight: bold;
-  line-height: 0;
   padding: 14px;
   color: $earth;
-  border-top: 1px solid $earth;
   margin: 0;
+  opacity: 0.3;
 
   @include box-sizing;
 
-  &:hover {
-  	p {
-  		transition: all $short ease;
-  		transform: scale(1.1);
-  	}
+  p {
+  	line-height: 0;
+  	font-size: 16px;
+  	font-weight: bold;
   }
+
+	&:hover {
+		transition: all $short ease;
+		opacity: 1;
+	}
+
+  &.active {
+  	opacity: 1;
+  }
+  
 }
 
-.months-btn-inside { background-color: $dblue; }
-.months-btn-outside { background-color: $lblue; }
-.months-btn-harvest { background-color: $green; }
+.months-btn-inside { background-color: $sowIn; }
+.months-btn-outside { background-color: $sowOut; }
+.months-btn-harvest { background-color: $harvest; }
 
 
 .main-key {
