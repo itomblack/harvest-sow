@@ -47,3 +47,13 @@
 -moz-user-select: none; /* Firefox */
 -ms-user-select: none; /* IE10+ */
 }
+
+// box sizing
+// @include box-sizing;
+@mixin box-sizing( $type: border-box ) {
+    -webkit-box-sizing: $type;
+       -moz-box-sizing: $type;
+         -o-box-sizing: $type;
+        -ms-box-sizing: $type;
+            box-sizing: $type;
+}

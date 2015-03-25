@@ -19,6 +19,11 @@ html,body {
   font-size: 14px;
   background-color: $earth;
   height: 100%;
+  @include box-sizing;
+}
+
+div {
+	@include box-sizing;
 }
 
 h1 {
@@ -172,8 +177,9 @@ li {
 }
 
 .menu-items-holder-margin {
-	top: 50px;
-	height: calc(90% - 50px);
+	top: 100px;
+	height: calc(90% - 100px);
+	border-top: 1px solid $earth;
 }
 
 .menu-close{
@@ -275,13 +281,13 @@ li {
 .months-form-header {
 	height: 50px;
 	width: 100%;
-	background-color: $dblue;
+	background-color: $green;
 	float: left;
 	text-align: center;
-	color: $earth;
-	border: 1px solid $earth;
+	color: $lblue;
 	position: relative;
 	display: none;
+	
 	@include no-text-select;
 
 	p {
@@ -290,6 +296,7 @@ li {
 		padding: 10px;
 	  margin: 0 auto;
   	width: 80%;
+  	height: 100%;
 	}
 	
 }
@@ -326,6 +333,11 @@ li {
 	}
 }
 
+.months-form-phase-left {
+	top: 50px;
+	left: 50px;
+}
+
 .months-form-right {
 	position: absolute;
 	right: 0;
@@ -352,6 +364,35 @@ li {
 	}
 }
 
+
+[class*='months-btn-'] {
+	width: 33.333%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	font-size: 18px;
+  font-weight: bold;
+  line-height: 0;
+  padding: 14px;
+  color: $earth;
+  border-top: 1px solid $earth;
+  margin: 0;
+
+  @include box-sizing;
+
+  &:hover {
+  	p {
+  		transition: all $short ease;
+  		transform: scale(1.1);
+  	}
+  }
+}
+
+.months-btn-inside { background-color: $dblue; }
+.months-btn-outside { background-color: $lblue; }
+.months-btn-harvest { background-color: $green; }
+
+
 .main-key {
 	width: 100%;
 
@@ -375,3 +416,5 @@ li {
 .sow-outside-active {	fill: $sowOut; }
 .harvest-active { 	fill: $harvest; }
 .svg-inactive { fill: lighten($earth, 3); } 
+
+
