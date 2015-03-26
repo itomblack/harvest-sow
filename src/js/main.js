@@ -96,6 +96,60 @@ var vegData = [
 		inside: "000000000000",
 		outside: "111100000000",
 		harvest: "000001100000"
+	},
+	{
+		name: "Leek",
+		inside: "110000000000",
+		outside: "001100000000",
+		harvest: "110000001111"
+	},
+	{
+		name: "Lettuce",
+		inside: "000000000000",
+		outside: "001111110000",
+		harvest: "000111111100"
+	},
+	{
+		name: "Onion",
+		inside: "110000000000",
+		outside: "001100000000",
+		harvest: "000000011000"
+	},
+	{
+		name: "Pepper",
+		inside: "001110000000",
+		outside: "000000000000",
+		harvest: "000000111100"
+	},
+	{
+		name: "Parsnip",
+		inside: "000000000000",
+		outside: "011110000000",
+		harvest: "110000000111"
+	},
+	{
+		name: "Potato",
+		inside: "000000000000",
+		outside: "000100000000",
+		harvest: "000000011100"
+	},
+	{
+		name: "Peas",
+		inside: "000000000000",
+		outside: "001111100000",
+		harvest: "000001111110"
+	},
+	{
+		name: "Pumpkin",
+		inside: "000000000000",
+		outside: "000111000000",
+		harvest: "000000011110"
+	},
+	{
+		name: "Rhubarb",
+		inside: "000000000000",
+		outside: "011100000000",
+		harvest: "000011110000"
 	}
 ];
 
@@ -357,7 +411,6 @@ function changeFunction(thisBtn, viewType) {
 
 
 /************ set function to indoor first for month selection ************/
-
 
 var whatFunctionButton = document.getElementById('months-form-btn-' + whatFunction);
 

@@ -103,6 +103,11 @@ li {
 		max-width: 280px;
 		max-height: 270px;
 	}
+
+	@media screen and (min-width: 900px){
+		max-width: 500px;
+		max-height: 500px;
+	}
 }
 
 .main-crop-selection {
@@ -124,13 +129,6 @@ li {
 		font-size: 1em;
 	}
 
-}
-
-.hide {
-	transform: scale(0);
-	max-width: 0;
-	height: 0;
-	border: none !important;
 }
 
 .main-nav {
@@ -242,7 +240,7 @@ li {
 	border-bottom: 1px solid $earth;
 	text-align: center;
 
-	transition: all $short ease;
+	transition: all $long ease;
 	transform-origin: 0% 0%;
 
 	img {
@@ -250,7 +248,7 @@ li {
 		display: block;
 		@include margin-auto;
 		padding-top: 10%;
-		transition: all $short ease;
+		transition: all $long ease;
 	}
 
 	h2 {
@@ -258,7 +256,7 @@ li {
 		font-weight: 700;
 		font-size: 14px;
 		padding-bottom: 5%;
-		transition: all $short ease;
+		transition: all $long ease;
 	}
 
 	&:hover{
@@ -300,6 +298,13 @@ li {
 .month-9 { transform:rotate(270deg) }
 .month-10 { transform:rotate(300deg) }
 .month-11 { transform:rotate(330deg) }
+
+.hide {
+	transform: scale(0);
+	max-width: 0;
+	height: 0;
+	border: none;
+}
 
 .visible {
 	top: 0;
