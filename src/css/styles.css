@@ -221,7 +221,11 @@ div {
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
+<<<<<<< Updated upstream
 /* line 29, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 23, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 h1 {
   font-family: 'Oswald', helvetica, arial, sans-serif;
   font-weight: 700;
@@ -229,14 +233,22 @@ h1 {
   text-transform: uppercase;
   line-height: 1em;
   padding-top: 0.25em; }
+<<<<<<< Updated upstream
   /* line 36, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 30, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   h1 span {
     color: #669924; }
   @media screen and (max-width: 500px) {
     h1 {
       font-size: 2em; } }
 
+<<<<<<< Updated upstream
 /* line 45, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 35, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 header {
   height: 84px;
   background-color: #336699;
@@ -245,12 +257,17 @@ header {
     header {
       height: 70px; } }
 
+<<<<<<< Updated upstream
 /* line 55, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 41, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 a, h2 {
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   text-decoration: none;
   color: #221000; }
 
+<<<<<<< Updated upstream
 /* line 61, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 ul, h1, h2 {
   margin: 0; }
@@ -300,6 +317,53 @@ li {
   background-color: #336699; }
 
 /* line 84, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 47, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+ul, h1, h2 {
+  margin: 0; }
+
+/* line 54, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.text-dblue {
+  color: #1e5061; }
+
+/* line 55, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.text-green {
+  color: #669924; }
+
+/* line 56, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.text-earth {
+  color: #221000; }
+
+/* line 57, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.text-mud {
+  color: #662b00; }
+
+/* line 58, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.text-lblue {
+  color: #336699; }
+
+/* line 60, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.bg-dblue {
+  background-color: #1e5061; }
+
+/* line 61, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.bg-green {
+  background-color: #669924; }
+
+/* line 62, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.bg-earth {
+  background-color: #221000; }
+
+/* line 63, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.bg-mud {
+  background-color: #662b00; }
+
+/* line 64, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.bg-lblue {
+  background-color: #336699; }
+
+/* line 66, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .phone-width {
   width: 100%;
   min-height: 100%;
@@ -308,6 +372,7 @@ li {
   position: relative;
   overflow: hidden; }
 
+<<<<<<< Updated upstream
 /* line 96, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .chart-wrapper {
   position: relative;
@@ -324,6 +389,14 @@ li {
       max-height: 500px; } }
 
 /* line 113, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 75, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.chart-wrapper {
+  margin-top: 70px;
+  position: relative; }
+
+/* line 80, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .main-crop-selection {
   width: 100%;
   position: absolute;
@@ -331,24 +404,44 @@ li {
   left: -5px;
   text-align: center;
   color: #336699; }
+<<<<<<< Updated upstream
   /* line 121, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 88, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .main-crop-selection img {
     width: 25%;
     display: block;
     margin-left: auto;
     margin-right: auto; }
+<<<<<<< Updated upstream
   /* line 127, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 94, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .main-crop-selection h3 {
     margin: 0;
     font-size: 1em; }
 
+<<<<<<< Updated upstream
 /* line 134, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 101, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.hide {
+  display: none; }
+
+/* line 105, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .main-nav {
   width: 70%;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto; }
+<<<<<<< Updated upstream
   /* line 138, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 109, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .main-nav a {
     float: left;
     text-align: center;
@@ -362,6 +455,7 @@ li {
     padding-top: 0.25em;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
+<<<<<<< Updated upstream
     /* line 150, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
     .main-nav a:hover {
       background-color: #669924; }
@@ -375,6 +469,13 @@ li {
       padding-bottom: 70px; } }
 
 /* line 167, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+    /* line 121, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+    .main-nav a:hover {
+      background-color: #669924; }
+
+/* line 127, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .menu-crops, .menu-months {
   position: absolute;
   display: block;
@@ -385,13 +486,18 @@ li {
   -webkit-transition: all 0.85s ease-out;
   transition: all 0.85s ease-out; }
 
+<<<<<<< Updated upstream
 /* line 177, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 137, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .menu-crops-background, .menu-months-background {
   position: absolute;
   width: 100%;
   height: 90%;
   opacity: 0.9; }
 
+<<<<<<< Updated upstream
 /* line 184, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .menu-crops-background {
   background-color: #336699; }
@@ -401,6 +507,17 @@ li {
   background-color: #1e5061; }
 
 /* line 192, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 144, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.menu-crops-background {
+  background-color: #336699; }
+
+/* line 148, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.menu-months-background {
+  background-color: #1e5061; }
+
+/* line 152, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .menu-items-holder {
   position: absolute;
   width: 100%;
@@ -408,6 +525,7 @@ li {
   overflow-y: auto;
   overflow-x: hidden; }
 
+<<<<<<< Updated upstream
 /* line 200, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .menu-items-holder-margin {
   top: 100px;
@@ -416,13 +534,20 @@ li {
   border-top: 1px solid #221000; }
 
 /* line 206, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 160, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .menu-close {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 10%;
   background-color: #221000; }
+<<<<<<< Updated upstream
   /* line 213, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 167, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .menu-close::after {
     content: "";
     width: 20px;
@@ -438,12 +563,20 @@ li {
     left: calc(50% - 10px);
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
+<<<<<<< Updated upstream
   /* line 227, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 181, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .menu-close:hover::after {
     top: 40%;
     border-color: #669924; }
 
+<<<<<<< Updated upstream
 /* line 234, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 188, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .menu-crops-item, .menu-months-item {
   width: 33.33333%;
   max-width: 100%;
@@ -454,33 +587,52 @@ li {
   border-right: 1px solid #221000;
   border-bottom: 1px solid #221000;
   text-align: center;
+<<<<<<< Updated upstream
   -webkit-transition: all 0.85s ease;
   transition: all 0.85s ease;
   -webkit-transform-origin: 0% 0%;
   -ms-transform-origin: 0% 0%;
   transform-origin: 0% 0%; }
   /* line 246, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  /* line 195, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .menu-crops-item img, .menu-months-item img {
     width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-top: 10%;
+<<<<<<< Updated upstream
     -webkit-transition: all 0.85s ease;
     transition: all 0.85s ease; }
   /* line 254, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 203, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .menu-crops-item h2, .menu-months-item h2 {
     color: #221000;
     font-weight: 700;
     font-size: 14px;
     padding-bottom: 5%;
+<<<<<<< Updated upstream
     -webkit-transition: all 0.85s ease;
     transition: all 0.85s ease; }
   /* line 263, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 212, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .menu-crops-item:hover img, .menu-crops-item:hover h2, .menu-months-item:hover img, .menu-months-item:hover h2 {
     -webkit-transform: scale(1.075);
     -ms-transform: scale(1.075);
     transform: scale(1.075); }
+<<<<<<< Updated upstream
   @media screen and (min-width: 650px) {
     .menu-crops-item, .menu-months-item {
       width: 25%; } }
@@ -498,70 +650,134 @@ li {
 
 /* line 290, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-1 {
+=======
+
+/* line 220, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.menu-crops-item:hover {
+  background-color: #669924; }
+
+/* line 226, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.menu-months-item:hover {
+  background-color: #336699; }
+
+/* line 231, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-2 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg); }
 
+<<<<<<< Updated upstream
 /* line 291, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-2 {
+=======
+/* line 232, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-3 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg); }
 
+<<<<<<< Updated upstream
 /* line 292, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-3 {
+=======
+/* line 233, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-4 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
+<<<<<<< Updated upstream
 /* line 293, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-4 {
+=======
+/* line 234, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-5 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg); }
 
+<<<<<<< Updated upstream
 /* line 294, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-5 {
+=======
+/* line 235, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-6 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   transform: rotate(150deg); }
 
+<<<<<<< Updated upstream
 /* line 295, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-6 {
+=======
+/* line 236, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-7 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
+<<<<<<< Updated upstream
 /* line 296, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-7 {
+=======
+/* line 237, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-8 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(210deg);
   -ms-transform: rotate(210deg);
   transform: rotate(210deg); }
 
+<<<<<<< Updated upstream
 /* line 297, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-8 {
+=======
+/* line 238, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-9 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
   transform: rotate(240deg); }
 
+<<<<<<< Updated upstream
 /* line 298, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-9 {
+=======
+/* line 239, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-10 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
+<<<<<<< Updated upstream
 /* line 299, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-10 {
+=======
+/* line 240, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-11 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(300deg);
   -ms-transform: rotate(300deg);
   transform: rotate(300deg); }
 
+<<<<<<< Updated upstream
 /* line 300, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .month-11 {
+=======
+/* line 241, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.month-12 {
+>>>>>>> Stashed changes
   -webkit-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
   transform: rotate(330deg); }
 
+<<<<<<< Updated upstream
 /* line 302, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .hide {
   -webkit-transform: scale(0);
@@ -708,20 +924,39 @@ li {
 .main-key {
   width: 100%; }
   /* line 439, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 243, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.visible {
+  top: 0; }
+
+/* line 247, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.main-key {
+  width: 100%; }
+  /* line 250, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .main-key img {
     margin: -10px auto -0 auto;
     display: block; }
 
+<<<<<<< Updated upstream
 /* line 445, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 256, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .svg-all-circle {
   width: 98%;
   height: auto;
   margin: 0 1%; }
+<<<<<<< Updated upstream
   /* line 450, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+  /* line 261, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
   .svg-all-circle path {
     -webkit-transition: all 1.4s ease-out;
     transition: all 1.4s ease-out; }
 
+<<<<<<< Updated upstream
 /* line 455, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
 .sow-inside-active {
   fill: #1E5061; }
@@ -735,5 +970,20 @@ li {
   fill: #669924; }
 
 /* line 458, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+=======
+/* line 266, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.sow-inside-active {
+  fill: #1E5061; }
+
+/* line 267, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.sow-outside-active {
+  fill: #1E8683; }
+
+/* line 268, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+.harvest-active {
+  fill: #669924; }
+
+/* line 269, /Users/itomblack/Repos/harvest-sow/src/sass/styles.scss */
+>>>>>>> Stashed changes
 .svg-inactive {
   fill: #311700; }
