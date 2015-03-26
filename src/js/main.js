@@ -150,6 +150,42 @@ var vegData = [
 		inside: "000000000000",
 		outside: "011100000000",
 		harvest: "000011110000"
+	},
+	{
+		name: "Rocket",
+		inside: "000000000000",
+		outside: "000111110000",
+		harvest: "000011111100"
+	},
+	{
+		name: "Spinach",
+		inside: "000000000000",
+		outside: "001111110000",
+		harvest: "000011111100"
+	},
+	{
+		name: "Sweet-Potato",
+		inside: "000000000000",
+		outside: "000110000000",
+		harvest: "000000001100"
+	},
+	{
+		name: "Sweet-Corn",
+		inside: "001110000000",
+		outside: "000010000000",
+		harvest: "000000011000"
+	},
+	{
+		name: "Tomato",
+		inside: "111100000000",
+		outside: "000110000000",
+		harvest: "000001111100"
+	},
+	{
+		name: "Watercress",
+		inside: "000000000000",
+		outside: "001111110000",
+		harvest: "000111111110"
 	}
 ];
 
@@ -225,7 +261,7 @@ for( i=0; i<monthSelection.length; i++) {
 		addMonthHeader(true);
 
 		//SHOW RELAVANT CROPS
-		displayCrops (selectedMonthId, 0);
+		displayCrops (selectedMonthId);
 	
 		
 	});
@@ -356,7 +392,7 @@ function addMonthHeader(openHeader) {
 
 /************ FILTER CROPS BY MONTH DATA ************/
 
-function displayCrops(selectedMonthId, filterNum) {  //!!***NEED TO GET THIS WORKING WITH SOME KIND OF FILTER SELECTOR!!***//
+function displayCrops(selectedMonthId) {  
 
 	//SET TITLE TO SELECTED MONTH
 		monthFormTitle.innerHTML = monthNames[selectedMonthId];
@@ -388,7 +424,7 @@ function moveMonth(direction) {
 		selectedMonthId = 0;
 	}
 	//display information
-	displayCrops (selectedMonthId, 0);
+	displayCrops (selectedMonthId);
 	
 
 }
