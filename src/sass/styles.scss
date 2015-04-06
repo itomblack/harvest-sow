@@ -81,6 +81,17 @@ li {
 .bg-mud{ background-color: $mud; }
 .bg-lblue{ background-color: $lblue; }
 
+
+
+#key3 {
+ &:hover {
+ 	transform: scale(2);
+ }
+
+}
+
+
+
 .phone-width {
 	// width: 320px;
 	// height: 568px;
@@ -269,7 +280,7 @@ li {
 		width:25%;
 	}
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 900px) {
 		width:16.666%;
 	}
 
@@ -302,7 +313,7 @@ li {
 .hide {
 	transform: scale(0);
 	max-width: 0;
-	height: 0;
+	// max-height: 0;
 	border: none;
 }
 
