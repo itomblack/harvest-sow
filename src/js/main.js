@@ -1,9 +1,6 @@
 	var mainNavCrops = document.getElementById('main-nav-crops'),
 	mainNavMonths = document.getElementById('main-nav-months'),
-	svgSow = document.getElementById('sow'),
-	svgHarvest = document.getElementById('harvest'),
 	menuCrops = document.getElementById('menu-crops'),
-	menuMonths = document.getElementById('menu-months'),
 	menuCloseCrops = document.getElementById('close-menu-crops'),
 	menuCloseMonths = document.getElementById('close-menu-months'),
 	monthsFormHeader = document.getElementById('months-form-header'),
@@ -194,7 +191,6 @@ var vegData = [
 
 mainNavCrops.addEventListener('click', function(){
 	menuOpen(event, 'buttonClick');
-
 });
 
 mainNavMonths.addEventListener('click', function(){
