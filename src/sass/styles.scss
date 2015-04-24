@@ -22,6 +22,10 @@ html,body {
   @include box-sizing;
 }
 
+body {
+	overflow-y: hidden;
+}
+
 div {
 	@include box-sizing;
 }
@@ -166,18 +170,18 @@ li {
 
 .chart-wrapper {
 	position:relative;
-	max-width: 320px;
-	max-height: 320px;
+	width: 320px;
+	height: 320px;
 	margin: auto;
 
 	@media screen and (max-width: 500px){
-		max-width: 280px;
-		max-height: 270px;
+		width: 280px;
+		height: 270px;
 	}
 
 	@media screen and (min-width: 900px){
-		max-width: 500px;
-		max-height: 500px;
+		width: 500px;
+		height: 500px;
 	}
 }
 
@@ -394,7 +398,8 @@ li {
 }
 
 .visible {
-	top: 0;
+	// top: 0;
+	transform: translate(0, -200%);
 }
 
 .months-form-header {
