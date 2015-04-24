@@ -275,16 +275,26 @@ nextMonth.addEventListener('click', function() { moveMonth(1); });
 
 function processCrop(selectedCropName) {
 
-  // function makeActive(chosenRingActive, ringPrefix) {
-  function makeActive(chosenRingActive) {
-    chosenRingActive.classList.remove("svg-inactive");
+  function makeActive(chosenRingActive, ringPrefix) {
+
+    // chosenRingActive.classList.remove("svg-inactive");
     // chosenRingActive.classList.add(ringPrefix + "-active");
+
+
+    var currentClass = chosenRingActive.getAttribute("class");
+    currentClass = currentClass.replace("svg-inactive","");
+    currentClass += (" " + ringPrefix + "-active");
+
+    chosenRingActive.setAttribute(currentClass);
   }
 
 
   function makeInactive(chosenRingInactive) {
+
     chosenRingInactive.classList.add("svg-inactive");
-    // chosenRingInactive.classList.remove("harvest-active");
+    chosenRingInactive.classList.remove("harvest-active");
+
+
   }
 
   //hide menu
@@ -306,16 +316,14 @@ function processCrop(selectedCropName) {
             var selectedHarvestSegment = document.getElementById('harvest-' + x);
 
             if (selectedCropInside.charAt(x) == "1") {
-              // makeActive(selectedInsideSegment, "sow-inside");
-              makeActive(selectedInsideSegment);
+              makeActive(selectedInsideSegment, "sow-inside");
             }
             else {
               makeInactive(selectedInsideSegment);
             }
 
             if (selectedCropOutside.charAt(x) == "1") {
-              // makeActive(selectedOutsideSegment, "sow-outside" );
-              makeActive(selectedOutsideSegment);
+              makeActive(selectedOutsideSegment, "sow-outside" );
             }
             else {
               makeInactive(selectedOutsideSegment);
@@ -325,8 +333,7 @@ function processCrop(selectedCropName) {
               makeActive(selectedHarvestSegment);
             }
             else {
-              // makeInactive(selectedHarvestSegment, "harvest");
-              makeInactive(selectedHarvestSegment);
+              makeInactive(selectedHarvestSegment, "harvest");
             }
 
       }
