@@ -330,7 +330,7 @@ function processCrop(selectedCropName) {
 			//load main central image
 
 			document.getElementById('main-crop-holder')
-			.innerHTML = "<img src='img/crops-coloured/crops_" + vegData[i].name + ".svg'/> <h3>" + vegData[i].name + "</h3>";
+			.innerHTML = "<img class='opacity-change' src='img/crops-coloured/crops_" + vegData[i].name + ".svg'/> <h3>" + vegData[i].name + "</h3>";
 
 		}
 

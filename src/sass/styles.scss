@@ -90,7 +90,67 @@ li {
 
 }
 
+.info {
 
+	.info-i {
+		color: $green;
+		font-weight: bold;
+		font-size: 1em;
+		position: absolute;
+		right: 10%;
+		bottom: 5%;
+		margin: 0;
+		padding: 3px 10px;
+		height: 30px;
+		width: 30px;
+		border: 3px solid $green;
+		border-radius: 50px;
+		text-align: center;
+		cursor: pointer;
+
+	}
+
+	.info-panel {
+		width: 50%;
+		background-color: darken($earth, 30%);
+		// color: lighten($mud, 10%);
+		color: $lblue;
+		position: absolute;
+		bottom: 5%;
+		right: -100%;
+		border-radius: 20px;
+
+		font-size: 14px;
+		padding: 20px 40px;
+
+		transition: all $long ease;
+
+		li {
+			list-style-type: disc;
+			margin-left: 1.3em;
+			font-weight: bold;
+		}
+
+		a {
+			color: $green;
+			font-weight: bold;
+		}
+
+		@media screen and (max-width: 500px){
+			width: 80%;
+		}
+	
+	
+
+	}
+
+	&:hover {
+		.info-panel {
+			right: 10%;;
+		}
+	}
+
+}
 
 .phone-width {
 	// width: 320px;
@@ -122,15 +182,15 @@ li {
 }
 
 .main-crop-selection {
-	width: 100%;
+	width: 50%;
 	position: absolute;
 	top: 32%;
-	left:-5px;
+	left: 24.5%;
 	text-align: center;
 	color: $lblue;
 
 	img {
-		width: 25%;
+		width: 50%;
 		display: block;
 		@include margin-auto;
 	}
@@ -140,11 +200,20 @@ li {
 		font-size: 1em;
 	}
 
+	.crop-intro-text {
+		margin-top: 25px;
+
+		@media screen and (min-width: 900px){
+			font-size: 2em;
+		}
+	}
+
 }
 
 .main-nav {
 	width: 70%;
 	margin-top: 10px;
+	height: 35px;
 	@include margin-auto;
 	a {
 		float: left;
@@ -171,7 +240,14 @@ li {
 	}
 
 	@media screen and ( min-width: 500px ) {
+			width: 60%;
 		  padding-bottom: 70px;
+	}
+	@media screen and ( min-width: 900px ) {
+		  width: 50%;
+	}
+	@media screen and ( min-width: 1100px ) {
+		  width: 30%;
 	}
 }
 
@@ -445,12 +521,79 @@ li {
 
 
 .main-key {
-	width: 100%;
+	width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
+
+  @media screen and (min-width: 700px){
+		width: 35%;
+	}
+
+	@media screen and (min-width: 900px){
+		width: 25%;
+	}
+
+}
+
+.main-key-section {
+	position: relative;
+	float: left;
+	width: 33.333%;
 
 	img {
-		margin: -10px auto -0 auto;
-		display: block;
+		width: 100%;
+		cursor: pointer;
 	}
+
+	.key-section-title {
+		opacity: 0;
+		z-index: -1;
+		width: 150%;
+		height: 60px;
+		background: $dblue;
+		color: $earth;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1em;
+		padding: 17px 5px;
+		text-align: center;
+		border-radius: 3px;
+		position: absolute;
+		top: -90px;
+		left: -25%;
+		box-shadow: 0 0 5px #111;
+
+		transition: all $short ease;
+
+
+		&::after {
+			content: "";
+			border-top: 15px solid $dblue;
+			border-right: 15px solid transparent;
+			border-left: 15px solid transparent;
+			position: absolute;
+			bottom: -14px;
+			left: calc(50% - 15px);
+		}
+
+		&.section-outside {	background-color: $sowOut;
+			&::after { border-top: 15px solid $sowOut; }
+		}
+
+		&.section-harvest {	background-color: $harvest;
+			&::after { border-top: 15px solid $harvest; }
+		}
+
+	}
+
+	&:hover {
+		.key-section-title {
+			z-index: 10;
+			opacity: 1;
+		}
+	}
+
 }
 
 .svg-all-circle {
@@ -468,4 +611,12 @@ li {
 .harvest-active { 	fill: $harvest; }
 .svg-inactive { fill: lighten($earth, 3); } 
 
+.opacity-change {
+	animation: changeOpac 1s ease forwards;
+}
+
+@keyframes changeOpac {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
 
