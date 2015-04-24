@@ -353,7 +353,7 @@ function menuOpen( menuChoice, type ) {
   var menuSelection = '';
 
   if (type == 'buttonClick') {
-
+  	
     //reset any hidden crops
     for( i=0; i<cropSelection.length; i++) { 
       cropSelection[i].classList.remove('hide');  
