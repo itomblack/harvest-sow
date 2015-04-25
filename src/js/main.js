@@ -16,7 +16,8 @@
   selectedCropOutside = '',
   selectedCropHarvest = '',
   selectedMonthId = '',
-  whatFunction = 'inside'
+  whatFunction = 'inside',
+  teaTime = document.getElementById('teatime');
   ;
 
  
@@ -365,6 +366,13 @@ function menuOpen( menuChoice, type ) {
     menuSelection = document.getElementById( menuChoice );
   }
     menuSelection.classList.toggle( 'visible' );
+
+
+  //hide teatime panel
+  
+  teaTime.classList.remove('tea-visible');
+  teaTime.classList.remove('opacity-change');
+
 }
 
 
@@ -407,8 +415,7 @@ function displayCrops(selectedMonthId) {
 
     var totalCrops = document.querySelectorAll('.menu-crops-item').length;
     var totalCropsVisible = document.querySelectorAll('.hide').length;
-    var teaTime = document.getElementById('teatime');
-
+  
     if (totalCrops == totalCropsVisible) {
       setTimeout(function(){
         teaTime.classList.add('tea-visible')
