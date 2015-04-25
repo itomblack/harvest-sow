@@ -309,52 +309,57 @@ li {
   -ms-transform: scale(2);
   transform: scale(2); }
 
-/* line 99, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
-.info .info-i {
-  color: #669924;
-  font-weight: bold;
-  font-size: 1em;
-  position: absolute;
-  right: 10%;
-  bottom: 5%;
-  margin: 0;
-  padding: 3px 10px;
-  height: 30px;
-  width: 30px;
-  border: 3px solid #669924;
-  border-radius: 50px;
-  text-align: center;
-  cursor: pointer; }
-/* line 117, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
-.info .info-panel {
-  width: 50%;
-  background-color: black;
-  color: #336699;
-  position: absolute;
-  bottom: 5%;
-  right: -100%;
-  border-radius: 20px;
-  font-size: 14px;
-  padding: 20px 40px;
-  -webkit-transition: all 0.85s ease;
-  transition: all 0.85s ease; }
-  /* line 132, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
-  .info .info-panel li {
-    list-style-type: disc;
-    margin-left: 1.3em;
-    font-weight: bold; }
-  /* line 138, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
-  .info .info-panel a {
+/* line 97, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+.info {
+  z-index: 20; }
+  /* line 101, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  .info .info-i {
     color: #669924;
-    font-weight: bold; }
-  @media screen and (max-width: 500px) {
-    .info .info-panel {
-      width: 80%; } }
-/* line 152, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
-.info:hover .info-panel {
-  right: 10%; }
+    font-weight: bold;
+    font-size: 1em;
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    margin: 0;
+    padding: 3px 10px;
+    height: 30px;
+    width: 30px;
+    border: 3px solid #669924;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 30; }
+  /* line 120, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  .info .info-panel {
+    width: 50%;
+    background-color: black;
+    color: #336699;
+    position: absolute;
+    bottom: 5%;
+    right: -100%;
+    border-radius: 20px;
+    z-index: 20;
+    font-size: 14px;
+    padding: 20px 40px;
+    -webkit-transition: all 0.85s ease;
+    transition: all 0.85s ease; }
+    /* line 135, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+    .info .info-panel li {
+      list-style-type: disc;
+      margin-left: 1.3em;
+      font-weight: bold; }
+    /* line 141, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+    .info .info-panel a {
+      color: #669924;
+      font-weight: bold; }
+    @media screen and (max-width: 500px) {
+      .info .info-panel {
+        width: 80%; } }
+  /* line 155, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  .info.hover .info-panel {
+    right: 10%; }
 
-/* line 159, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 162, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .phone-width {
   width: 100%;
   min-height: 100%;
@@ -363,7 +368,7 @@ li {
   position: relative;
   overflow: hidden; }
 
-/* line 171, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 174, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .chart-wrapper {
   position: relative;
   width: 320px;
@@ -378,7 +383,7 @@ li {
       width: 500px;
       height: 500px; } }
 
-/* line 188, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 191, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .main-crop-selection {
   width: 50%;
   position: absolute;
@@ -386,31 +391,31 @@ li {
   left: 24.5%;
   text-align: center;
   color: #336699; }
-  /* line 196, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 199, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .main-crop-selection img {
     width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  /* line 202, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 205, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .main-crop-selection h3 {
     margin: 0;
     font-size: 1em; }
-  /* line 207, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 210, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .main-crop-selection .crop-intro-text {
     margin-top: 25px; }
     @media screen and (min-width: 900px) {
       .main-crop-selection .crop-intro-text {
         font-size: 2em; } }
 
-/* line 217, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 220, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .main-nav {
   width: 70%;
   margin-top: 10px;
   height: 35px;
   margin-left: auto;
   margin-right: auto; }
-  /* line 222, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 225, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .main-nav a {
     float: left;
     text-align: center;
@@ -424,7 +429,7 @@ li {
     padding-top: 0.25em;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    /* line 234, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+    /* line 237, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
     .main-nav a:hover {
       background-color: #669924; }
     @media screen and (max-width: 500px) {
@@ -443,8 +448,9 @@ li {
     .main-nav {
       width: 30%; } }
 
-/* line 258, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 261, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-crops, .menu-months {
+  z-index: 40;
   position: absolute;
   display: block;
   top: 200%;
@@ -454,44 +460,48 @@ li {
   -webkit-transition: all 0.85s ease-out;
   transition: all 0.85s ease-out; }
 
-/* line 268, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 272, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-crops-background, .menu-months-background {
+  z-index: 40;
   position: absolute;
   width: 100%;
   height: 90%;
   opacity: 0.94; }
 
-/* line 275, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 280, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-crops-background {
   background-color: #336699; }
 
-/* line 279, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 284, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-months-background {
   background-color: #1e5061; }
 
-/* line 283, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 288, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-items-holder {
+  z-index: 40;
   position: absolute;
   width: 100%;
   height: 90%;
   overflow-y: auto;
   overflow-x: hidden; }
 
-/* line 291, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 297, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-items-holder-margin {
   top: 100px;
   height: -webkit-calc(90% - 100px);
   height: calc(90% - 100px);
   border-top: 1px solid #221000; }
 
-/* line 297, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 303, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-close {
+  z-index: 40;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 10%;
   background-color: #221000; }
-  /* line 304, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 312, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .menu-close::after {
     content: "";
     width: 20px;
@@ -507,13 +517,14 @@ li {
     left: calc(50% - 10px);
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
-  /* line 318, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 326, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .menu-close:hover::after {
     top: 40%;
     border-color: #669924; }
 
-/* line 325, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 333, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-crops-item, .menu-months-item {
+  z-index: 40;
   width: 33.33333%;
   max-width: 100%;
   float: left;
@@ -528,7 +539,7 @@ li {
   -webkit-transform-origin: 0% 0%;
   -ms-transform-origin: 0% 0%;
   transform-origin: 0% 0%; }
-  /* line 337, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 346, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .menu-crops-item img, .menu-months-item img {
     width: 80%;
     display: block;
@@ -537,7 +548,7 @@ li {
     padding-top: 10%;
     -webkit-transition: all 0.85s ease;
     transition: all 0.85s ease; }
-  /* line 345, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 354, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .menu-crops-item h2, .menu-months-item h2 {
     color: #221000;
     font-weight: 700;
@@ -545,7 +556,7 @@ li {
     padding-bottom: 5%;
     -webkit-transition: all 0.85s ease;
     transition: all 0.85s ease; }
-  /* line 354, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 363, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .menu-crops-item:hover img, .menu-crops-item:hover h2, .menu-months-item:hover img, .menu-months-item:hover h2 {
     -webkit-transform: scale(1.075);
     -ms-transform: scale(1.075);
@@ -557,81 +568,81 @@ li {
     .menu-crops-item, .menu-months-item {
       width: 16.666%; } }
 
-/* line 370, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 379, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-crops-item:hover {
   background-color: #669924; }
 
-/* line 376, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 385, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .menu-months-item:hover {
   background-color: #336699; }
 
-/* line 381, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 390, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-1 {
   -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
   transform: rotate(30deg); }
 
-/* line 382, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 391, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-2 {
   -webkit-transform: rotate(60deg);
   -ms-transform: rotate(60deg);
   transform: rotate(60deg); }
 
-/* line 383, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 392, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-3 {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
-/* line 384, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 393, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-4 {
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg); }
 
-/* line 385, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 394, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-5 {
   -webkit-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   transform: rotate(150deg); }
 
-/* line 386, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 395, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-6 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
-/* line 387, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 396, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-7 {
   -webkit-transform: rotate(210deg);
   -ms-transform: rotate(210deg);
   transform: rotate(210deg); }
 
-/* line 388, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 397, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-8 {
   -webkit-transform: rotate(240deg);
   -ms-transform: rotate(240deg);
   transform: rotate(240deg); }
 
-/* line 389, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 398, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-9 {
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
-/* line 390, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 399, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-10 {
   -webkit-transform: rotate(300deg);
   -ms-transform: rotate(300deg);
   transform: rotate(300deg); }
 
-/* line 391, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 400, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .month-11 {
   -webkit-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
   transform: rotate(330deg); }
 
-/* line 393, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 402, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .hide {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -639,14 +650,15 @@ li {
   max-width: 0;
   border: none; }
 
-/* line 400, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 409, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .visible {
   -webkit-transform: translate(0, -200%);
   -ms-transform: translate(0, -200%);
   transform: translate(0, -200%); }
 
-/* line 405, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 414, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-header {
+  z-index: 40;
   height: 50px;
   width: 100%;
   background-color: #336699;
@@ -662,7 +674,7 @@ li {
   /* Firefox */
   -ms-user-select: none;
   /* IE10+ */ }
-  /* line 418, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 428, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-header p {
     font-weight: bold;
     font-size: 20px;
@@ -671,19 +683,19 @@ li {
     width: 80%;
     height: 50px; }
 
-/* line 429, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 439, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-left, .months-form-right {
   height: 50px;
   width: 50px;
   background-color: #336699;
   border-bottom: 1px solid #221000; }
 
-/* line 436, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 446, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-left {
   position: absolute;
   left: 0;
   top: 0; }
-  /* line 441, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 451, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-left::after {
     content: "";
     width: 20px;
@@ -698,22 +710,22 @@ li {
     left: 45%;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
-  /* line 455, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 465, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-left:hover::after {
     left: 30%;
     border-color: #1e5061; }
 
-/* line 462, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 472, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-phase-left {
   top: 50px;
   left: 50px; }
 
-/* line 467, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 477, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-form-right {
   position: absolute;
   right: 0;
   top: 0; }
-  /* line 472, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 482, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-right::after {
     content: "";
     width: 20px;
@@ -728,12 +740,12 @@ li {
     right: 45%;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
-  /* line 486, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 496, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .months-form-right:hover::after {
     right: 30%;
     border-color: #1e5061; }
 
-/* line 494, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 504, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 [class*='months-btn-'] {
   width: 33.333%;
   height: 50px;
@@ -748,33 +760,33 @@ li {
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
-  /* line 506, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 516, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   [class*='months-btn-'] p {
     line-height: 0;
     font-size: 16px;
     font-weight: bold; }
-  /* line 512, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 522, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   [class*='months-btn-']:hover {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     opacity: 1; }
-  /* line 517, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 527, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   [class*='months-btn-'].active {
     opacity: 1; }
 
-/* line 523, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 533, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-btn-inside {
   background-color: #1E5061; }
 
-/* line 524, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 534, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-btn-outside {
   background-color: #1E8683; }
 
-/* line 525, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 535, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .months-btn-harvest {
   background-color: #669924; }
 
-/* line 528, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 538, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .main-key {
   width: 50%;
   margin: auto;
@@ -787,16 +799,16 @@ li {
     .main-key {
       width: 25%; } }
 
-/* line 544, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 554, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .main-key-section {
   position: relative;
   float: left;
   width: 33.333%; }
-  /* line 549, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 559, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .main-key-section img {
     width: 100%;
     cursor: pointer; }
-  /* line 554, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 564, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .main-key-section .key-section-title {
     opacity: 0;
     z-index: -1;
@@ -817,7 +829,7 @@ li {
     box-shadow: 0 0 5px #111;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    /* line 575, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+    /* line 585, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
     .main-key-section .key-section-title::after {
       content: "";
       border-top: 15px solid #1e5061;
@@ -827,73 +839,73 @@ li {
       bottom: -14px;
       left: -webkit-calc(50% - 15px);
       left: calc(50% - 15px); }
-    /* line 585, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+    /* line 595, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
     .main-key-section .key-section-title.section-outside {
       background-color: #1E8683; }
-      /* line 586, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+      /* line 596, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
       .main-key-section .key-section-title.section-outside::after {
         border-top: 15px solid #1E8683; }
-    /* line 589, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+    /* line 599, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
     .main-key-section .key-section-title.section-harvest {
       background-color: #669924; }
-      /* line 590, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+      /* line 600, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
       .main-key-section .key-section-title.section-harvest::after {
         border-top: 15px solid #669924; }
-  /* line 596, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
-  .main-key-section:hover .key-section-title {
+  /* line 606, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  .main-key-section.hover .key-section-title {
     z-index: 10;
     opacity: 1; }
 
-/* line 604, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 614, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .svg-all-circle {
   width: 98%;
   height: auto;
   margin: 0 1%; }
-  /* line 609, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 619, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .svg-all-circle path {
     -webkit-transition: all 1.4s ease-out;
     transition: all 1.4s ease-out; }
 
-/* line 614, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 624, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .sow-inside-active {
   fill: #1E5061; }
 
-/* line 615, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 625, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .sow-outside-active {
   fill: #1E8683; }
 
-/* line 616, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 626, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .harvest-active {
   fill: #669924; }
 
-/* line 617, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 627, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .svg-inactive {
   fill: #311700; }
 
-/* line 619, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 629, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .opacity-change {
   -webkit-animation: changeOpac 1s ease forwards;
   animation: changeOpac 1s ease forwards; }
 
 @-webkit-keyframes changeOpac {
-  /* line 624, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 634, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   from {
     opacity: 0; }
 
-  /* line 625, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 635, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   to {
     opacity: 1; } }
 
 @keyframes changeOpac {
-  /* line 624, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 634, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   from {
     opacity: 0; }
 
-  /* line 625, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 635, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   to {
     opacity: 1; } }
 
-/* line 628, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 638, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .teatime {
   width: 100%;
   text-align: center;
@@ -902,7 +914,7 @@ li {
   line-height: 1.3em;
   padding: 20px 50px;
   display: none; }
-  /* line 637, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+  /* line 647, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
   .teatime img {
     width: 30%;
     margin-left: auto;
@@ -910,10 +922,10 @@ li {
   @media screen and (max-width: 700px) {
     .teatime {
       font-size: 1.3em; }
-      /* line 645, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+      /* line 655, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
       .teatime img {
         width: 50%; } }
 
-/* line 651, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
+/* line 661, /Users/BIT/Documents/Design/Repos/harvest-sow/src/sass/styles.scss */
 .tea-visible {
   display: block; }

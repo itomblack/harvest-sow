@@ -17,7 +17,7 @@
   selectedCropHarvest = '',
   selectedMonthId = '',
   whatFunction = 'inside',
-  teaTime = document.getElementById('teatime');
+  teaTime = document.getElementById('teatime')
   ;
 
  
@@ -272,6 +272,39 @@ prevMonth.addEventListener('click', function() { moveMonth(-1); });
 nextMonth.addEventListener('click', function() { moveMonth(1); });
 
 
+/************ CLICK KEY ************/
+
+var cropKey = document.getElementsByClassName('main-key-section');
+for( i=0; i<cropKey.length; i++) {
+
+  cropKey[i].addEventListener('click', function(){
+
+    var selectedKey = this;
+
+    if (selectedKey.classList.contains('hover')){
+      selectedKey.classList.remove('hover');
+    }
+    else{
+      for( x=0; x<cropKey.length; x++) {
+        cropKey[x].classList.remove('hover');
+        console.log('test');
+      }
+
+      selectedKey.classList.add('hover');
+    }
+
+  });
+
+}
+
+/************ INFO PANEL ************/
+var infoShow = document.getElementById('info-box');
+console.log(infoShow)
+infoShow.addEventListener('click', function(){
+  infoShow.classList.toggle('hover');
+});
+
+
 
 /************ CLICK CROPS ************/
 
@@ -418,8 +451,8 @@ function displayCrops(selectedMonthId) {
   
     if (totalCrops == totalCropsVisible) {
       setTimeout(function(){
-        teaTime.classList.add('tea-visible')
-        teaTime.classList.add('opacity-change')
+        teaTime.classList.add('tea-visible');
+        teaTime.classList.add('opacity-change');
       }, 200);
     }
     else{
